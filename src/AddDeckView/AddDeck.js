@@ -16,6 +16,7 @@ export class AddCard extends Component {
             this.state.title
         );
         this.props.navigation.navigate('DeckList');
+        this.props.navigation.navigate('Deck',{deck: {title: this.state.title}});
     }
 
     render() {
