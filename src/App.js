@@ -24,7 +24,7 @@ export default class App extends React.Component {
 
     loadStateFromStorage() {
         SecureStore.getItemAsync('yo').then((res) => {
-            console.log(`get items success ${JSON.stringify(res)}`);
+            console.log(`get items success`);
             this.setState({data: JSON.parse(res)})
         });
     }
