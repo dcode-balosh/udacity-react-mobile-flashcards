@@ -5,13 +5,6 @@ class DeckList extends Component {
     render() {
         return (
             <Container>
-                <Header>
-                    <Body>
-                        <Title>List</Title>
-                    </Body>
-                    <Right />
-                </Header>
-
                 {/*<Button onPress={() => this.props.resetData()}>*/}
                 {/*<Text>Reset Data</Text>*/}
                 {/*</Button>*/}
