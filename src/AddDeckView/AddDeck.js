@@ -15,7 +15,6 @@ export class AddCard extends Component {
         this.props.screenProps.onAddDeckSubmit(
             this.state.title
         );
-        this.props.navigation.navigate('DeckList');
         this.props.navigation.navigate('Deck',{deck: {title: this.state.title}});
     }
 
