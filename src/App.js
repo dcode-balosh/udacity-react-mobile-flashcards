@@ -2,6 +2,7 @@ import React from "react";
 import {StyleSheet, Text, View, Button} from "react-native";
 import {SecureStore} from "expo";
 import {initData} from "./init_data";
+import DeckList from "./DeckListView/DeckList";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -15,20 +16,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Open up App.js to start working on your app!</Text>
-                <Text>Changes you make will automatically reload.</Text>
-                <Text>Shake your phone to open the developer menu.</Text>
-                <Text>{JSON.stringify(this.state)}</Text>
-                <View>
-                    <Button
-                        onPress={() => this.resetData()}
-                        title="Reset Data"
-                        color="#841584"
-                        accessibilityLabel="Learn more about this purple button"
-                    />
-                </View>
-            </View>
+            <DeckList decks={this.state.data} resetData={this.resetData.bind(this)}> </DeckList>
         );
     }
 

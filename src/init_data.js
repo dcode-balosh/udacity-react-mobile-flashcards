@@ -20,5 +20,269 @@ export const initData = {
                 answer: 'The combination of a function and the lexical environment within which that function was declared.'
             }
         ]
+    },
+    JavaScript2: {
+        title: 'JavaScript2',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript3: {
+        title: 'JavaScript3',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript4: {
+        title: 'JavaScript4',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript5: {
+        title: 'JavaScript5',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript6: {
+        title: 'JavaScript6',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript7: {
+        title: 'JavaScript7',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript8:{
+        title: 'JavaScript8',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
+    },
+    JavaScript9: {
+        title: 'JavaScript9',
+        questions: [
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            },
+            {
+                question: 'What is a closure?',
+                answer: 'The combination of a function and the lexical environment within which that function was declared.'
+            }
+        ]
     }
 };
