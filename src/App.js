@@ -4,6 +4,7 @@ import {SecureStore} from "expo";
 import {initData} from "./init_data";
 import {Container} from "native-base";
 import RootNavigator from "./RootNavigator";
+import { setLocalNotification, clearLocalNotification} from './Notify'
 
 
 export default class App extends React.Component {
@@ -16,6 +17,9 @@ export default class App extends React.Component {
 
     componentDidMount() {
         this.loadStateFromStorage();
+
+        clearLocalNotification()
+            .then(setLocalNotification)
     }
 
     render() {
