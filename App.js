@@ -1,6 +1,6 @@
 import React from "react";
 import {StyleSheet, Text, View, Button} from "react-native";
-import { SecureStore } from 'expo';
+import {SecureStore} from "expo";
 import {initData} from "./src/init_data";
 
 export default class App extends React.Component {
@@ -39,7 +39,7 @@ export default class App extends React.Component {
         });
     }
 
-    resetData(){
+    resetData() {
         this.saveData(initData);
     }
 
