@@ -50,10 +50,7 @@ export default class App extends React.Component {
 
     loadStateFromStorage() {
         SecureStore.getItemAsync('yo').then((res) => {
-            if(res){
-                console.log(`get items success`);
-            }else{
-                console.log(`key was empty initialize with empty obj`);
+            if(!res){
                 res = '{}'
             }
             this.setState({data: JSON.parse(res)})
@@ -67,10 +64,9 @@ export default class App extends React.Component {
     saveData(value) {
         SecureStore.setItemAsync('yo', JSON.stringify(value)).then((res) => {
                 this.setState({data: value,touch: this.touch()});
-                console.log('finish save!');
             }
         ).catch((res) =>
-            console.log(`error save! ${res}`)
+            null
         );
     }
 
