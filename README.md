@@ -1,3 +1,7 @@
+# OS
+Tested on Android 5.0.1
+
+# Setup & Run Video
 [setup and run](https://vimeo.com/245619105)
 
 # Flashcards
