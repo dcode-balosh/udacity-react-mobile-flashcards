@@ -50,7 +50,12 @@ export default class App extends React.Component {
 
     loadStateFromStorage() {
         SecureStore.getItemAsync('yo').then((res) => {
-            console.log(`get items success`);
+            if(res){
+                console.log(`get items success`);
+            }else{
+                console.log(`key was empty initialize with empty obj`);
+                res = '{}'
+            }
             this.setState({data: JSON.parse(res)})
         });
     }
