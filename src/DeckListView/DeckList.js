@@ -8,27 +8,34 @@ class DeckList extends Component {
                 {/*<Button onPress={() => this.props.resetData()}>*/}
                 {/*<Text>Reset Data</Text>*/}
                 {/*</Button>*/}
-                <Content>
                     {
                         this.props.screenProps.decks && (
-                            <List
-                                dataArray={Object.values(this.props.screenProps.decks).reduce((acu,obj) => ( acu.concat({title: obj.title, size: obj.questions.length})) , [] )}
-                                renderRow={data =>
-                                            <ListItem button onPress={() => this.props.navigation.navigate(
-                                                                                                            'Deck',
-                                                                                                            {deck: this.props.screenProps.decks[data.title]})
-                                            }>
-                                                <Text>
-                {`${data.title}${'\n'}${data.size} Cards`}
-                                                </Text>
-                                                <Right>
-                                                    <Icon name="arrow-forward" />
-                                                </Right>
-                                            </ListItem>}
-                            />
+                            <Content>
+                                <Button full light
+                                        name="AddDeck"
+                                        onPress={() => this.props.navigation.navigate('AddDeck')}
+                                        >
+                                    <Text>Create Deck</Text>
+                                </Button>
+                                <List
+                                    dataArray={Object.values(this.props.screenProps.decks).reduce((acu,obj) => ( acu.concat({title: obj.title, size: obj.questions.length})) , [] )}
+                                    renderRow={data =>
+                                                <ListItem button onPress={() => this.props.navigation.navigate(
+                                                                                                                'Deck',
+                                                                                                                {deck: this.props.screenProps.decks[data.title]})
+                                                }>
+                                                    <Text>
+                    {`${data.title}${'\n'}${data.size} Cards`}
+                                                    </Text>
+                                                    <Right>
+                                                        <Icon name="arrow-forward" />
+                                                    </Right>
+                                                </ListItem>}
+                                />
+                            </Content>
+
                         )
                     }
-                </Content>
             </Container>
         );
     }

@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Button} from "react-native";
 import {SecureStore} from "expo";
 import {initData} from "./init_data";
 import {Container} from "native-base";
-import RootNavigator from "./RootNavigator"
+import RootNavigator from "./RootNavigator";
 
 
 export default class App extends React.Component {
@@ -18,12 +18,20 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <RootNavigator screenProps={{ decks: this.state.data, onAddCardSubmit: this.onAddCardSubmit }}/>
+            <RootNavigator screenProps={{
+                decks: this.state.data,
+                onAddCardSubmit: this.onAddCardSubmit,
+                onAddDeckSubmit: this.onAddDeckSubmit
+              }}/>
         );
     }
 
     onAddCardSubmit(deckTitle,question,answer){
         console.log(`Adding to deck: ${JSON.stringify(deckTitle)}\nCard:${JSON.stringify({question,answer})}`)
+    }
+
+    onAddDeckSubmit(deckTitle){
+        console.log(`Adding new deck: ${deckTitle}`)
     }
 
     loadStateFromStorage() {

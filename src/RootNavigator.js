@@ -3,6 +3,7 @@ import DeckList from "./DeckListView/DeckList";
 import Deck from "./DeckView/Deck";
 import {StackNavigator} from "react-navigation";
 import AddCard from "./AddCardView/AddCard";
+import AddDeck from "./AddDeckView/AddDeck";
 
 const RootNavigator = StackNavigator(
     {
@@ -23,7 +24,14 @@ const RootNavigator = StackNavigator(
             navigationOptions: ({navigation}) => ({
                 title: `Add card to deck ${navigation.state.params.deck.title}`,
             }),
+        },
+        AddDeck: {
+            screen: AddDeck,
+            navigationOptions: ({navigation}) => ({
+                title: `Create new deck`,
+            }),
         }
+
     }
 );
 
