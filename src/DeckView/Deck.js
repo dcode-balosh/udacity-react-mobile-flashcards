@@ -11,8 +11,13 @@ class Deck extends Component {
             <Container>
                 <Content>
                     <H1 style={{ alignSelf: "center",padding: 15 }}>{`${deck.questions.length}`} Cards</H1>
-                    <Button full light><Text>Add Card</Text></Button>
-                    <Button full primary><Text>Start Quiz</Text></Button>
+                    <Button full light title='Add Card'
+                            onPress={() => this.props.navigation.navigate('AddCard',{deck: deck})}>
+                        <Text>Add Card</Text>
+                    </Button>
+                    <Button full primary title='Start Quiz'
+                            onPress={() => this.props.navigation.navigate('Quiz',{deck: deck})} >
+                    <Text>Start Quiz</Text></Button>
                 </Content>
             </Container>
         );
