@@ -2,7 +2,9 @@ import React from "react";
 import {StyleSheet, Text, View, Button} from "react-native";
 import {SecureStore} from "expo";
 import {initData} from "./init_data";
-import DeckList from "./DeckListView/DeckList";
+import {Container} from "native-base";
+import RootNavigator from "./RootNavigator"
+
 
 export default class App extends React.Component {
     constructor(props) {
@@ -16,7 +18,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <DeckList decks={this.state.data} resetData={this.resetData.bind(this)}> </DeckList>
+            <RootNavigator screenProps={{ decks: this.state.data }}/>
         );
     }
 

@@ -6,11 +6,6 @@ class DeckList extends Component {
         return (
             <Container>
                 <Header>
-                    {/*<Left>*/}
-                        {/*<Button transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>*/}
-                            {/*<Icon name="menu"/>*/}
-                        {/*</Button>*/}
-                    {/*</Left>*/}
                     <Body>
                         <Title>List</Title>
                     </Body>
@@ -18,26 +13,25 @@ class DeckList extends Component {
                 </Header>
 
                 {/*<Button onPress={() => this.props.resetData()}>*/}
-                    {/*<Text>Reset Data</Text>*/}
+                {/*<Text>Reset Data</Text>*/}
                 {/*</Button>*/}
-
                 <Content>
                     {
-                        this.props.decks && (
+                        this.props.screenProps.decks && (
                             <List
-                                dataArray={Object.values(this.props.decks).reduce((acu,obj) => ( acu.concat({title: obj.title, size: obj.questions.length})) , [] )}
+                                dataArray={Object.values(this.props.screenProps.decks).reduce((acu,obj) => ( acu.concat({title: obj.title, size: obj.questions.length})) , [] )}
                                 renderRow={data =>
-							<ListItem button onPress={() => console.log('pressed')}>
-								<Text>
-									{`
-									${data.title}
-									${data.size} Cards
-									`}
-								</Text>
-								<Right>
-									<Icon name="arrow-forward" />
-								</Right>
-							</ListItem>}
+                                            <ListItem button onPress={() => this.props.navigation.navigate(
+                                                                                                            'Deck',
+                                                                                                            {deck: this.props.screenProps.decks[data.title]})
+                                            }>
+                                                <Text>
+                {`${data.title}${'\n'}${data.size} Cards`}
+                                                </Text>
+                                                <Right>
+                                                    <Icon name="arrow-forward" />
+                                                </Right>
+                                            </ListItem>}
                             />
                         )
                     }
