@@ -3,7 +3,7 @@ import {Container, Header, Title, Content, Button, Icon, Text, Left, Right, Body
 // source from: https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/CRNA/js/components/list/index.js
 class Deck extends Component {
     render() {
-        let deck = this.props.navigation.state.params.deck;
+        let deck = this.props.screenProps.decks[this.props.navigation.state.params.deck.title];
         if(undefined === deck){
             return (<Container><Content><Text>Loading deck please wait..</Text></Content></Container>)
         }

@@ -9,7 +9,9 @@ import RootNavigator from "./RootNavigator";
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            touch: this.touch()
+        }
     }
 
     componentDidMount() {
@@ -21,13 +23,18 @@ export default class App extends React.Component {
             <RootNavigator screenProps={{
                 decks: this.state.data,
                 onAddCardSubmit: this.onAddCardSubmit.bind(this),
-                onAddDeckSubmit: this.onAddDeckSubmit.bind(this)
+                onAddDeckSubmit: this.onAddDeckSubmit.bind(this),
+                touch: this.state.touch
               }}/>
         );
     }
 
-    onAddCardSubmit(deckTitle,question,answer){
-        console.log(`Adding to deck: ${JSON.stringify(deckTitle)}\nCard:${JSON.stringify({question,answer})}`)
+    onAddCardSubmit(deckTitle, question, answer) {
+        let arr = [...this.state.data[deckTitle].questions,...[{question,answer}]];
+        let obj = {};
+        obj[deckTitle] = {title: deckTitle,questions: arr};
+        let new_state = {...this.state.data,...obj};
+        this.saveData(new_state);
     }
 
     onAddDeckSubmit(deckTitle){
@@ -49,12 +56,17 @@ export default class App extends React.Component {
     }
 
     saveData(value) {
-        SecureStore.setItemAsync('yo', JSON.stringify(value)).then((res) =>
-            console.log('finish save!')
+        SecureStore.setItemAsync('yo', JSON.stringify(value)).then((res) => {
+                this.setState({data: value,touch: this.touch()});
+                console.log('finish save!');
+            }
         ).catch((res) =>
             console.log(`error save! ${res}`)
         );
-        this.setState({data: value});
+    }
+
+    touch(){
+        return Date.now();
     }
 }
 
