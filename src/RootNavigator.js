@@ -1,3 +1,4 @@
+import React from 'react'
 import DeckList from "./DeckListView/DeckList";
 import Deck from "./DeckView/Deck";
 import {StackNavigator} from "react-navigation";

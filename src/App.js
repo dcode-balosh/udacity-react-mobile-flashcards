@@ -18,8 +18,12 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <RootNavigator screenProps={{ decks: this.state.data }}/>
+            <RootNavigator screenProps={{ decks: this.state.data, onAddCardSubmit: this.onAddCardSubmit }}/>
         );
+    }
+
+    onAddCardSubmit(deckTitle,question,answer){
+        console.log(`Adding to deck: ${JSON.stringify(deckTitle)}\nCard:${JSON.stringify({question,answer})}`)
     }
 
     loadStateFromStorage() {
