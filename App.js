@@ -2,7 +2,6 @@ import React from "react";
 import {StyleSheet, Text, View, Button} from "react-native";
 import { SecureStore } from 'expo';
 import {initData} from "./src/init_data";
-export const dataKey = 'data'
 
 export default class App extends React.Component {
     constructor(props) {
