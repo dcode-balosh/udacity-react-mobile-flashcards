@@ -20,8 +20,8 @@ export default class App extends React.Component {
         return (
             <RootNavigator screenProps={{
                 decks: this.state.data,
-                onAddCardSubmit: this.onAddCardSubmit,
-                onAddDeckSubmit: this.onAddDeckSubmit
+                onAddCardSubmit: this.onAddCardSubmit.bind(this),
+                onAddDeckSubmit: this.onAddDeckSubmit.bind(this)
               }}/>
         );
     }
@@ -31,7 +31,10 @@ export default class App extends React.Component {
     }
 
     onAddDeckSubmit(deckTitle){
-        console.log(`Adding new deck: ${deckTitle}`)
+        let obj = {};
+        obj[deckTitle] = {title: deckTitle,questions: []};
+        let new_state = {...this.state.data,...obj};
+        this.saveData(new_state);
     }
 
     loadStateFromStorage() {
