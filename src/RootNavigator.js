@@ -4,6 +4,7 @@ import Deck from "./DeckView/Deck";
 import {StackNavigator} from "react-navigation";
 import AddCard from "./AddCardView/AddCard";
 import AddDeck from "./AddDeckView/AddDeck";
+import Quiz from "./QuizView/Quiz";
 
 const RootNavigator = StackNavigator(
     {
@@ -30,7 +31,14 @@ const RootNavigator = StackNavigator(
             navigationOptions: ({navigation}) => ({
                 title: `Create new deck`,
             }),
+        },
+        Quiz: {
+            screen: Quiz,
+            navigationOptions: ({navigation}) => ({
+                title: `Quiz on deck ${navigation.state.params.deck.title}`,
+            }),
         }
+
 
     }
 );
