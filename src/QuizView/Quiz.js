@@ -1,5 +1,8 @@
 import React, {Component} from "react";
-import {Container, Header, Title, Content, Button, Icon, Text, Left, Right, Body, List, ListItem, H3} from "native-base";
+import {
+    Container, Header, Title, Content, Button, Icon, Text, Left, Right, Body, List, ListItem, H3,
+    View
+} from "native-base";
 // source from: https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/CRNA/js/components/list/index.js
 
 function Answer(props) {
@@ -9,6 +12,26 @@ function Answer(props) {
     else {
         return null
     }
+}
+
+function Navigate({navigate,restartQuiz,deck}) {
+    return <View>
+        <Button full primary title='BackHome'
+                onPress={() => navigate('DeckList')}>
+            <Text>Back to decks list</Text>
+        </Button>
+        <Button full primary title='BackDeck'
+                onPress={() => navigate(
+                    'Deck',
+                    {deck}
+                )}>
+            <Text>Back to deck view</Text>
+        </Button>
+        <Button full primary title='RestartQuiz'
+                onPress={() => restartQuiz()}>
+            <Text>Restart Quiz</Text>
+        </Button>
+    </View>
 }
 
 class Deck extends Component {
@@ -35,10 +58,11 @@ class Deck extends Component {
                     <Content>
                         <Text
                             style={{ padding: 15 }}>{`Solved correctly: ${this.state.correct}\nOut of ${length}\nPercentage: ${Math.floor((this.state.correct / length) * 100)}`}</Text>
-                        <Button full primary title='BackHome'
-                                onPress={() => this.props.navigation.navigate('DeckList')}>
-                            <Text>Back to decks list</Text>
-                        </Button>
+                        <Navigate
+                            navigate={this.props.navigation.navigate}
+                            restartQuiz={this.restartQuiz}
+                            deck={deck}
+                        />
                     </Content>
                 </Container>
             )
@@ -74,9 +98,18 @@ class Deck extends Component {
                                   )}
                     ><Text>Incorrect</Text></Button>
 
+                    <Navigate
+                        navigate={this.props.navigation.navigate}
+                        restartQuiz={this.restartQuiz}
+                        deck={deck}
+                    />
                 </Content>
             </Container>
         );
+    }
+
+    restartQuiz() {
+        console.log('restarting quiz');
     }
 }
 
