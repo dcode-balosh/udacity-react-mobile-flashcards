@@ -37,11 +37,19 @@ function Navigate({navigate,restartQuiz,deck}) {
 class Deck extends Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = this.initial_state()
+    }
+
+    initial_state() {
+        return {
             index: 0,
             correct: 0,
             seeAnswer: false
-        }
+        };
+    }
+
+    restartQuiz() {
+        this.setState(this.initial_state())
     }
 
     render() {
@@ -60,7 +68,7 @@ class Deck extends Component {
                             style={{ padding: 15 }}>{`Solved correctly: ${this.state.correct}\nOut of ${length}\nPercentage: ${Math.floor((this.state.correct / length) * 100)}`}</Text>
                         <Navigate
                             navigate={this.props.navigation.navigate}
-                            restartQuiz={this.restartQuiz}
+                            restartQuiz={this.restartQuiz.bind(this)}
                             deck={deck}
                         />
                     </Content>
@@ -100,16 +108,12 @@ class Deck extends Component {
 
                     <Navigate
                         navigate={this.props.navigation.navigate}
-                        restartQuiz={this.restartQuiz}
+                        restartQuiz={this.restartQuiz.bind(this)}
                         deck={deck}
                     />
                 </Content>
             </Container>
         );
-    }
-
-    restartQuiz() {
-        console.log('restarting quiz');
     }
 }
 
