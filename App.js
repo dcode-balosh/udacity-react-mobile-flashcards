@@ -2,18 +2,16 @@ import React from "react";
 import {StyleSheet, Text, View, Button} from "react-native";
 import { SecureStore } from 'expo';
 import {initData} from "./src/init_data";
+export const dataKey = 'data'
 
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {jeff: 2}
+        this.state = {}
     }
 
     componentDidMount() {
-        SecureStore.getItemAsync('yo').then((res) => {
-            console.log(`get items success ${JSON.stringify(res)}`)
-            this.setState({please: res})
-        });
+        this.loadStateFromStorage();
     }
 
     render() {
@@ -22,7 +20,7 @@ export default class App extends React.Component {
                 <Text>Open up App.js to start working on your app!</Text>
                 <Text>Changes you make will automatically reload.</Text>
                 <Text>Shake your phone to open the developer menu.</Text>
-                <Text>{JSON.stringify(this.state, '    ')}</Text>
+                <Text>{JSON.stringify(this.state)}</Text>
                 <View>
                     <Button
                         onPress={() => this.resetData()}
@@ -35,6 +33,13 @@ export default class App extends React.Component {
         );
     }
 
+    loadStateFromStorage() {
+        SecureStore.getItemAsync('yo').then((res) => {
+            console.log(`get items success ${JSON.stringify(res)}`);
+            this.setState({data: JSON.parse(res)})
+        });
+    }
+
     resetData(){
         this.saveData(initData);
     }
@@ -45,7 +50,7 @@ export default class App extends React.Component {
         ).catch((res) =>
             console.log(`error save! ${res}`)
         );
-        this.setState({"what": value});
+        this.setState({data: value});
     }
 }
 
