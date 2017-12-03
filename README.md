@@ -1,3 +1,5 @@
+[setup and run](https://vimeo.com/245619105)
+
 # Flashcards
 Android most Memorizing app.
 
